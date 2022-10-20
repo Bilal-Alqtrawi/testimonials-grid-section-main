@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  background-color: hsl(210, 46%, 95%);
+}
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Small (Mobile) */
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+/* Medium (Small Screen) */
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+/* Large (Medium Screen)*/
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+/* X-Large (Large Screen) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+/* XX-Large (X-Large Screen) */
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+/* End Global Rules */
+.container {
+  margin-top: 30px ;
+  display: grid;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .box.one {
+    order: 1;
+  }
+  .box.two {
+    order: 2;
+  }
+  .box.three {
+    order: 5;
+  }
+  .box.four {
+    order: 3;
+  }
+  .box.five {
+    order: 4;
+  }
+}
+@media (min-width: 991px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+}
+.box {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  padding: 30px;
+  height: 100%;
+}
+.box .personal-info {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.box .personal-info img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.box .personal-info h3 {
+  color: rgb(255, 255, 255, 90%);
+  margin-bottom: 0;
+}
+.box.three .personal-info h3,
+.box.four .personal-info h3 {
+  color: rgb(0, 0, 0, 90%);
+}
+.box .personal-info h3 .box .personal-info p {
+  margin-top: 5px;
+  color: rgb(207, 207, 207, 50%);
+}
+.box q {
+  color: rgb(207, 207, 207, 70%);
+  line-height: 1.3;
+}
+.box.one {
+  background-color: hsl(263, 55%, 52%);
+}
+.box.two {
+  background-color: hsl(217, 19%, 35%);
+}
+.box.three {
+  background-color: hsl(0, 0%, 100%);
+}
+.box.four {
+  background-color: hsl(0, 0%, 100%);
+}
+.box.five {
+  background-color: hsl(219, 29%, 14%);
+}
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+@media (min-width: 768px) {
+  .box.one {
+    grid-column: span 2;
+  }
+  .box.three {
+    grid-row: span 2;
+  }
+  .box.four {
+    grid-area: 2 /1;
+  }
+  .box.five {
+    grid-column: span 2;
+  }
+}
+.box.one > p,
+.box.two > p,
+.box.five > p {
+  color: white;
+}
+.box.three > p,
+.box.four > p {
+  color: hsl(217, 19%, 35%);
+}
+.box > p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
