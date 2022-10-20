@@ -59,6 +59,7 @@ html {
 /* End Global Rules */
 .container {
   margin-top: 30px ;
+  margin-bottom: 30px ;
   display: grid;
   gap: 30px;
 }
